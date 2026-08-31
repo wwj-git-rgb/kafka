@@ -1,0 +1,335 @@
+# Instincts generated from https://github.com/wwj-git-rgb/kafka
+# Generated: 2026-05-22T13:24:58.002Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: kafka-commit-ticket-ref
+trigger: "when writing a commit message"
+confidence: 0.75
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/kafka
+---
+
+# Kafka Commit Ticket Ref
+
+## Action
+
+Include ticket reference matching pattern: ^([A-Z]+-\d+)
+
+## Evidence
+
+- Ticket pattern detected in commits
+- Pattern: ^([A-Z]+-\d+)
+
+---
+id: kafka-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/kafka
+---
+
+# Kafka Commit Length
+
+## Action
+
+Write moderate-length commit messages (~86 characters)
+
+## Evidence
+
+- Average commit message length: 86 chars
+- Based on 1 commits
+
+---
+id: kafka-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/kafka
+---
+
+# Kafka Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: kafka-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/kafka
+---
+
+# Kafka Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: kafka-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/kafka
+---
+
+# Kafka Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: kafka-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/kafka
+---
+
+# Kafka Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: kafka-instinct-class-naming
+trigger: "When creating a new Java class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Naming convention: classes use PascalCase
+
+---
+id: kafka-instinct-constant-naming
+trigger: "When defining a constant in Java"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Naming convention: constants use SCREAMING_SNAKE_CASE
+
+---
+id: kafka-instinct-function-naming
+trigger: "When defining a function/method in Java"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Naming convention: functions use camelCase
+
+---
+id: kafka-instinct-file-naming
+trigger: "When creating a new Java source file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct File Naming
+
+## Action
+
+Name the file using PascalCase
+
+## Evidence
+
+- Naming convention: files use PascalCase
+
+---
+id: kafka-instinct-import-style
+trigger: "When importing Java classes"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Import style: relative
+
+---
+id: kafka-instinct-export-style
+trigger: "When exporting Java classes or members"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Export style: named
+
+---
+id: kafka-instinct-test-type
+trigger: "When writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Test Type
+
+## Action
+
+Write unit tests
+
+## Evidence
+
+- Test types: unit
+
+---
+id: kafka-instinct-test-location
+trigger: "When adding a test file"
+confidence: 0.6
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Test Location
+
+## Action
+
+Place test files in mixed locations (not strictly separated from source)
+
+## Evidence
+
+- Test location: mixed
+
+---
+id: kafka-instinct-test-file-pattern
+trigger: "When naming a test file (TypeScript)"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Test File Pattern
+
+## Action
+
+Use the pattern '*.test.ts' for test files
+
+## Evidence
+
+- Test file pattern: *.test.ts
+
+---
+id: kafka-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Commit Format
+
+## Action
+
+Start the commit message with a ticket reference in the format 'KAFKA-<number>:'
+
+## Evidence
+
+- Commit example: 'KAFKA-19893: Reduce tiered storage redundancy...'
+
+---
+id: kafka-instinct-commit-length
+trigger: "When composing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/kafka
+---
+
+# Kafka Instinct Commit Length
+
+## Action
+
+Aim for an average commit message length of around 86 characters
+
+## Evidence
+
+- Commit average length: 86
+
